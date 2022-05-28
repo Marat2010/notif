@@ -1,0 +1,9 @@
+.venv
+.idea
+__pycache__/
+*.pyc
+my_*
+my_temp/
+requirements_*.txt
+postgres_data/
+

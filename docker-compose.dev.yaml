@@ -1,0 +1,60 @@
+#version: '3.7'
+version: '3'
+services:
+  db:
+    image:  postgres:12.6-alpine
+    container_name: db_notif
+
+    ports:
+      - 50432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+    environment:
+      POSTGRES_USER:  marat
+      POSTGRES_PASSWORD:  1
+      POSTGRES_DB: db_notif
+
+#volumes:
+#  postgres_data:
+
+
+#      - POSTGRES_USER=marat
+#      - POSTGRES_PASSWORD=1
+#      - POSTGRES_DB=db_notifications
+
+#  db_adminer:
+#    image: adminer:4.8.0
+#    restart: always
+#    ports:
+#      - 9000:8080
+
+#------------------------------------
+#    image:  postgres
+#    image:  postgres:11
+#    image:  postgres:alpine
+
+#      - postgres_data:/var/lib/postgresql/data
+
+#      - POSTGRES_USER=root
+#      - POSTGRES_PASSWORD=root
+#      - POSTGRES_DB=db_notifications
+
+
+
+#      source: /home/marat/PycharmProjects/notifications/postgres_data
+#    networks:
+#      net1:
+#        ipv4_address: 192.168.0.244
+
+#    networks:
+#      net1:
+#        ipv4_address: 192.168.0.245
+#
+#networks:
+#  net1:
+#    driver: bridge
+#    ipam:
+#      config:
+#        - subnet: 192.168.0.240/28
+
